@@ -1,0 +1,16 @@
+language: java
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - "$HOME/.m2"
+install: true
+before_script:
+- gpg --import groupon-api.key
+script:
+- mvn clean install --settings settings.xml -P ci-strict -Dgpg.skip=true -U
+- if [ \( -n "${TRAVIS_TAG}" \) -a "${TRAVIS_PULL_REQUEST}" = "false" ]; then mvn
+  deploy --settings settings.xml -P ci-strict -DskipAllVerification=true; fi;
+env:
+  global:
+    secure: oggDb/ff7Rs2sE060OPYt4M7SsWNWdIGsvZG0SjnJcPmWG9Cgje9Ml6tj9pb86iVPG3unhYA36+071zJmhypvE9TxV4YXWtZCn37a0Tev3NRWqBXfVfr5EceJotYgPtlEosPnj32wV/g9PIP29wjtxPrDxGv0DYpoX0SKnTI0ep4ww6xPzAzxOOWgepiMzhzAYtrAFROdnRtGW4nXF08R2kpKuM5HfAxxvq304dvEu+ciQ/ePiStk+gb+HWLY4UXlSJwHPz+kSDtmI5ZZLNYOSPezTXJk0wMXMyPDETjAHqkDEDZzwESIEBxgIBzvwI8U/XEc83g8icx7wrHXN91JPXtFFfTpTxlHUMFcc5kNETHyDBwxCKdAcP8hiKmE3fqgRYQIdr7oHlDdN+bbCx9kxshRdGE9hm2G82n5pO1UXquF5nghtYuGrHnRYhl/7flj2MU/7CEVsQpmLghcxD3FiF5KRtsEgxHz5DCczT3wROFR/ME7UajOkDHuAKwrfVQBadzhN+u+ExqHKRC7YRkO43cd2Rk+lybuyDBmCGZrUCOJRpxXqU5lHPJt1hJlwTneDG0p97UfFmf0Aq3RNc93ky0QrERjPfw5IJjpVReJOaAMaZb+RcAd6wp8dNDikUW+vSeRBpAKgDJ/fHMA5pjTbMjev3foMZRY2IcO7+2crc=
