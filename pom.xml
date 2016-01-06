@@ -123,7 +123,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!--Dependency versions-->
-    <build-resources.version>1.4.2</build-resources.version>
+    <build-resources.version>1.4.4</build-resources.version>
     <checkstyle.version>6.9</checkstyle.version>
 
     <!--Coverage Settings-->
