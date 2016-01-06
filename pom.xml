@@ -14,8 +14,7 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.groupon.api</groupId>
   <artifactId>api-parent-pom</artifactId>
@@ -23,7 +22,7 @@
   <name>Groupon API Parent Pom</name>
   <description>Standardized set of build tool configurations for Groupon API projects</description>
   <url>https://github.com/groupon/api-parent-pom</url>
-  <version>1.0.11-SNAPSHOT</version>
+  <version>1.0.11</version>
 
   <licenses>
     <license>
@@ -111,7 +110,7 @@
     <connection>scm:git:git@github.com:groupon/api-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:groupon/api-parent-pom.git</developerConnection>
     <url>https://github.com/groupon/api-parent-pom</url>
-    <tag>HEAD</tag>
+    <tag>api-parent-pom-1.0.11</tag>
   </scm>
 
   <properties>
