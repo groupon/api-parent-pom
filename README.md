@@ -5,6 +5,10 @@ api-parent-pom
     <img src="https://img.shields.io/hexpm/l/plug.svg"
          alt="License: Apache 2">
 </a>
+<a href="https://travis-ci.org/groupon/api-parent-pom/">
+    <img src="https://travis-ci.org/groupon/api-parent-pom.png"
+         alt="Travis Build">
+</a>
 <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.groupon.api%22%20a%3A%22api-parent-pom%22">
     <img src="https://img.shields.io/maven-central/v/com.groupon.api/api-parent-pom.svg"
          alt="Maven Artifact">
