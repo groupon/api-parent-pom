@@ -22,7 +22,7 @@
   <name>Groupon API Parent Pom</name>
   <description>Standardized set of build tool configurations for Groupon API projects</description>
   <url>https://github.com/groupon/api-parent-pom</url>
-  <version>1.1.3</version>
+  <version>1.1.4-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -110,7 +110,7 @@
     <connection>scm:git:git@github.com:groupon/api-parent-pom.git</connection>
     <developerConnection>scm:git:git@github.com:groupon/api-parent-pom.git</developerConnection>
     <url>https://github.com/groupon/api-parent-pom</url>
-    <tag>api-parent-pom-1.1.3</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <properties>
