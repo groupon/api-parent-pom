@@ -22,7 +22,7 @@
   <name>Groupon API Parent Pom</name>
   <description>Standardized set of build tool configurations for Groupon API projects</description>
   <url>https://github.com/groupon/api-parent-pom</url>
-  <version>1.1.8-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -33,8 +33,8 @@
 
   <developers>
     <developer>
-      <id>alessandrorossi</id>
-      <email>arossi@groupon.com</email>
+      <id>jhoongroh</id>
+      <email>jroh@groupon.com</email>
       <organization>Groupon</organization>
       <organizationUrl>http://www.groupon.com</organizationUrl>
       <roles>
@@ -51,8 +51,8 @@
       </roles>
     </developer>
     <developer>
-      <id>gilmarkham</id>
-      <email>gilligan@groupon.com</email>
+      <id>elai</id>
+      <email>elai@groupon.com</email>
       <organization>Groupon</organization>
       <organizationUrl>http://www.groupon.com</organizationUrl>
       <roles>
@@ -60,44 +60,8 @@
       </roles>
     </developer>
     <developer>
-      <id>namratalele</id>
-      <email>nlele@groupon.com</email>
-      <organization>Groupon</organization>
-      <organizationUrl>http://www.groupon.com</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>stuartsiegrist</id>
-      <email>fsiegrist@groupon.com</email>
-      <organization>Groupon</organization>
-      <organizationUrl>http://www.groupon.com</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>swatikumar</id>
-      <email>swkumar@groupon.com</email>
-      <organization>Groupon</organization>
-      <organizationUrl>http://www.groupon.com</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>trevormack</id>
-      <email>tmack@groupon.com</email>
-      <organization>Groupon</organization>
-      <organizationUrl>http://www.groupon.com</organizationUrl>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>villekoskela</id>
-      <email>vkoskela@groupon.com</email>
+      <id>cchacin</id>
+      <email>cchacin@groupon.com</email>
       <organization>Groupon</organization>
       <organizationUrl>http://www.groupon.com</organizationUrl>
       <roles>
@@ -123,7 +87,7 @@
 
     <!--Dependency versions-->
     <build-resources.version>1.4.7</build-resources.version>
-    <checkstyle.version>6.9</checkstyle.version>
+    <checkstyle.version>7.8</checkstyle.version>
 
     <!--Coverage Settings-->
     <jacoco.check.line.coverage>0.0</jacoco.check.line.coverage>
@@ -133,22 +97,22 @@
     <skipDeploy>false</skipDeploy>
 
     <!--Plugin versions-->
-    <maven.buildnumber.plugin.version>1.3</maven.buildnumber.plugin.version>
-    <maven.checkstyle.plugin.version>2.16</maven.checkstyle.plugin.version>
-    <maven.compiler.plugin.version>3.2</maven.compiler.plugin.version>
-    <maven.dependency.plugin.version>2.10</maven.dependency.plugin.version>
+    <maven.buildnumber.plugin.version>1.4</maven.buildnumber.plugin.version>
+    <maven.checkstyle.plugin.version>2.17</maven.checkstyle.plugin.version>
+    <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+    <maven.dependency.plugin.version>3.0.2</maven.dependency.plugin.version>
     <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
-    <maven.failsafe.plugin.version>2.18.1</maven.failsafe.plugin.version>
-    <maven.findbugs.plugin.version>3.0.2</maven.findbugs.plugin.version>
+    <maven.failsafe.plugin.version>2.20.1</maven.failsafe.plugin.version>
+    <maven.findbugs.plugin.version>3.0.5</maven.findbugs.plugin.version>
     <maven.gpg.plugin.version>1.6</maven.gpg.plugin.version>
-    <maven.jacoco.plugin.version>0.7.5.201505241946</maven.jacoco.plugin.version>
-    <maven.javadoc.plugin.version>2.10.1</maven.javadoc.plugin.version>
-    <maven.release.plugin.version>2.5</maven.release.plugin.version>
-    <maven.resources.plugin.version>2.6</maven.resources.plugin.version>
-    <maven.source.plugin.version>2.4</maven.source.plugin.version>
-    <maven.surefire.plugin.version>2.18.1</maven.surefire.plugin.version>
+    <maven.jacoco.plugin.version>0.7.9</maven.jacoco.plugin.version>
+    <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
+    <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+    <maven.resources.plugin.version>3.0.2</maven.resources.plugin.version>
+    <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
+    <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
     <maven.surefire.report.plugin.version>2.18.1</maven.surefire.report.plugin.version>
-    <nexus.staging.plugin.version>1.6.6</nexus.staging.plugin.version>
+    <nexus.staging.plugin.version>1.6.8</nexus.staging.plugin.version>
   </properties>
 
   <profiles>
