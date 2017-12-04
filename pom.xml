@@ -113,6 +113,7 @@
     <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
     <maven.surefire.report.plugin.version>2.18.1</maven.surefire.report.plugin.version>
     <nexus.staging.plugin.version>1.6.8</nexus.staging.plugin.version>
+    <maven.versions.plugin.version>2.5</maven.versions.plugin.version>
   </properties>
 
   <profiles>
@@ -411,6 +412,22 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>${maven.versions.plugin.version}</version>
+        <executions>
+          <execution>
+            <id>default-display-dependency-updates</id>
+            <goals>
+              <goal>display-dependency-updates</goal>
+            </goals>
+            <phase>validate</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
   </build>
 
   <distributionManagement>
