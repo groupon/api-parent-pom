@@ -111,6 +111,7 @@
     <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
     <maven.surefire.plugin.version>2.22.1</maven.surefire.plugin.version>
     <maven.surefire.report.plugin.version>2.22.1</maven.surefire.report.plugin.version>
+    <maven.jar.plugin.version>3.1.0</maven.jar.plugin.version>
     <nexus.staging.plugin.version>1.6.8</nexus.staging.plugin.version>
     <com.github.spotbugs.plugin.version>3.1.8</com.github.spotbugs.plugin.version>
   </properties>
@@ -365,6 +366,46 @@
             <keepStagingRepositoryOnCloseRuleFailure>true</keepStagingRepositoryOnCloseRuleFailure>
             <description>Project ${project.groupId}:${project.artifactId}:${project.version} at ${buildNumber}</description>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven.jar.plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-jar</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <configuration>
+                <!-- do not build an empty jar if the project is e.g. a pom project -->
+                <skipIfEmpty>true</skipIfEmpty>
+                <archive>
+                  <addMavenDescriptor>false</addMavenDescriptor>
+                  <manifest>
+                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                    <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                    <addClasspath>false</addClasspath>
+                  </manifest>
+                  <manifestEntries>
+                    <Automatic-Module-Name>${module.name}</Automatic-Module-Name>
+                  </manifestEntries>
+                </archive>
+                <!-- exclude logging configuration for tests to avoid multiple logback.xml config warnings -->
+                <excludes>
+                  <exclude>**/logback-test.xml</exclude>
+                </excludes>
+              </configuration>
+            </execution>
+            <execution>
+              <id>attach-tests</id>
+              <phase>package</phase>
+              <goals>
+                <!-- Always build a test-jar (if test classes present) -->
+                <goal>test-jar</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
