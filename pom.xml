@@ -87,7 +87,7 @@
 
     <!--Dependency versions-->
     <build-resources.version>1.5.0</build-resources.version>
-    <checkstyle.version>8.14</checkstyle.version>
+    <checkstyle.version>8.29</checkstyle.version>
 
     <!--Coverage Settings-->
     <jacoco.check.line.coverage>0.0</jacoco.check.line.coverage>
